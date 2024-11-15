@@ -2151,40 +2151,41 @@ form{
     }
 
     
-function handleMenu() {
+ function handleMenu() {
     var sidemenu = document.querySelector(".nav ul");
+    var navLinks = sidemenu.querySelectorAll("li a");
     var screenWidth = window.innerWidth;
 
-    if (screenWidth <= 600) {
-        
-        function openmenu() {
-            sidemenu.style.right = "0"; 
+    
+    function openmenu() {
+        if (screenWidth <= 600) {
+            sidemenu.style.right = "0";
+        } else if (screenWidth > 600 && screenWidth <= 1300) {
+            sidemenu.style.top = "0";
         }
+    }
 
-        function closemenu() {
-            sidemenu.style.right = "-400px"; 
-        }
-    } else if (screenWidth > 600 && screenWidth <= 1300) {
-        
-        function openmenu() {
-            sidemenu.style.top = "0"; 
-        }
-
-        function closemenu() {
-            sidemenu.style.top = "-350px"; 
+    function closemenu() {
+        if (screenWidth <= 600) {
+            sidemenu.style.right = "-300px";
+        } else if (screenWidth > 600 && screenWidth <= 1300) {
+            sidemenu.style.top = "-350px";
         }
     }
 
     
     document.getElementById('menubar').onclick = openmenu;
     document.getElementById('closebar').onclick = closemenu;
+
+    
+    navLinks.forEach(link => {
+        link.addEventListener("click", closemenu);
+    });
 }
 
 
-window.onresize = handleMenu;
-
-
 window.onload = handleMenu;
+window.onresize = handleMenu;
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
