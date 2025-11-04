@@ -135,6 +135,7 @@ span{
 }
 .change span{
     position: relative;
+    
 }
 .change span::before{
     content: 'Java Full Stack Developer';
@@ -154,24 +155,12 @@ span{
 @keyframes cursor {
     to{
         border-left: 3px solid rgb(255, 255, 255) ;
+        
+
     }
     
 }
-@keyframes words{
-    0%,25% {
-        content: 'Java Full Stack Developer';
-    }
-    26%,50% {
-        content: 'App Developer';
-    }
-    51%,75% {
-        content: 'UI & UX Designer';
-    }
-     76%,100% {
-        content: 'Student';
-    }
 
-}
 h3{
     margin-top: 10px;
 }
@@ -746,9 +735,9 @@ form{
         top:0;
         right: 0;
         height: 100vh;
-        width: 400px;
+        width: 250px;
         padding-top: 50px;
-        right: -400px;
+        right: -300px;
         z-index: 5;
         transition: right 0.5s;
         }
@@ -1520,6 +1509,7 @@ form{
         }
        
 }
+
 @media screen and (min-width: 900px) and (max-width: 950px) {
     .nav {
         margin-left: 0;
@@ -1901,11 +1891,12 @@ form{
        top:0;
        right: 0;
        height: 100vh;
-       width: 400px;
+       width: 250px;
        padding-top: 50px;
-       right: -400px;
+       right: -300px;
        z-index: 5;
        transition: right 0.5s;
+       
        }
        .nav ul li{
            display: block;
@@ -1994,7 +1985,7 @@ form{
         </div>
         <div class="detail" id="about">
             <h1>Hi,It's<span> IHILAS A</span></h1>
-            <h3 class="change">I'm a  <span></span></h3>
+            <h3 class="change">I am <span id="typing-text"></span></h3>
             <p id="detail">Highly motivated recent graduate with a Bachelor of Engineering in Computer Science, passionate about full stack development and proficient in MySQL, SQL, Java, and Python. During my internship, I gained hands-on experience in real-world projects, showcasing my ability to achieve and excel. With a strong foundation in both front-end and back-end technologies, I am eager to bring my enthusiasm and fresh perspective to a dynamic team.Seeking an opportunity to kickstart my career in a challenging and rewarding environment, I am dedicated to continuous learning and adapting to new challenges. My problem-solving skills, teamwork, and effective communication abilities make me a valuable addition to any team. I am ready to tackle complex problems and grow alongside a forward-thinking company committed to innovation and excellence.</p>
             <div class="heading">
                 <p>Education</p>
@@ -2014,7 +2005,7 @@ form{
             </div>
             <div class="btn-container">
                 <a href="mailto:ihilas2002@gmail.com" class="btna"><button class="btn" id="hire">HIRE ME</button></a>
-                <a href="https://drive.google.com/file/d/1phutjC-UPixjkr52U5gRBL3mnxf9458A/view?usp=sharing" download class="btna"><button class="btn" id="cv">Download CV</button></a>
+                <a href="https://drive.google.com/file/d/17UfHp_IoeDqF0tthYbfXehRUOiQYS5rG/view" download class="btna"><button class="btn" id="cv">Download CV</button></a>
             </div>
 </div>
     </div>
@@ -2043,13 +2034,13 @@ form{
       <p class="subt-link" onclick="opentab('project')">Projects</p>
       </div>
       <div class="cont active" id="internship">
-        <div class="epxbox"><a href="https://drive.google.com/file/d/1N3eJmM9LvLbhcEEFeLHXThTfh7aB0bQ-/view" class="epxa"><img src="BharatIntern_LE_auto_x2.jpg" class="epximg3">
+        <div class="epxbox"><a href="" class="epxa"><img src="BharatIntern_LE_auto_x2.jpg" class="epximg3">
             <p class="epxtext">Web Development</p>
-            <p class="epxtext">(AUGUST 2024 - SEPTEMBER 2024)</p></a>
+            <p class="epxtext">(Present)</p></a>
         </div>
         <div class="epxbox"><a href="https://drive.google.com/file/d/1DcYPs5yQzFMHa4fmYZXoV94UkiKf4q0H/view" class="epxa"><img src="motioncut.png" class="epximg3">
             <p class="epxtext">Java Programming</p>
-            <p class="epxtext">(AUGUST 2024 - SEPTEMBER 2024)</p></a>
+            <p class="epxtext">(AUGUST 2024 - September 2024)</p></a>
        </div> 
        <div class="epxbox"><a href="https://drive.google.com/file/d/16iYIGvI9pgLq8UKLq12-INxoCI-YB3b4/view" class="epxa"><img src="company4_LE_auto_x2.jpg" class="epximg3">
         <p class="epxtext">Web Development</p>
@@ -2069,7 +2060,7 @@ form{
                 </div>  
             </div>
      <div class="cont" id="project">
-        <div class="epxbox"><a href="https://guileless-stardust-04ae17.netlify.app" class="proactive"><img src="earth.jpg" class="projectimg">
+        <div class="epxbox"><a href="https://verdant-beignet-70d3b7.netlify.app" class="proactive"><img src="earth.jpg" class="projectimg">
             <p>Weather Website</p>
             </a></div>
             <div class="epxbox"><a href="https://fantastic-gumption-001a7b.netlify.app" class="proactive"><img src="ro.jpg" class="projectimg">
@@ -2090,7 +2081,8 @@ form{
             </div>
             <div class="epxbox"><a href="https://www.figma.com/design/bldCX7fE5ievjSRTIIAx8h/E-commerce-website?node-id=0-1&m=dev&t=bMg5TrHZtbkzcpIa-1" class="proactive"><img src="webdegsin.png" class="projectimg">
                 <p>E-Commerce Web Design</p>
-            </a></div>
+            </a>
+           </div>
             </div> 
 </div>
 
@@ -2151,7 +2143,7 @@ form{
     }
 
     
- function handleMenu() {
+    function handleMenu() {
     var sidemenu = document.querySelector(".nav ul");
     var navLinks = sidemenu.querySelectorAll("li a");
     var screenWidth = window.innerWidth;
@@ -2209,6 +2201,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
    
+  const roles = [
+  "I am a Java Full Stack Developer",
+  "I am a UI & UX Designer",
+  "I am  a Student"
+];
+
+let i = 0;
+const wordsSpan = document.querySelector(".change");
+
+function changeRole() {
+  wordsSpan.textContent = roles[i];
+  i = (i + 1) % roles.length;
+}
+
+setInterval(changeRole, 3000);
+changeRole();
+
+function changeRole() {
+  wordsSpan.classList.add("fade");
+  setTimeout(() => {
+    wordsSpan.textContent = roles[i];
+    wordsSpan.classList.remove("fade");
+    i = (i + 1) % roles.length;
+  }, 500);
+}
+
 </script>
 </body>
 </html>
